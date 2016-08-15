@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <script  src = "java2.js" ></script>
+    <link rel="stylesheet" type="text/css" href="formstyle.css">
+	</head>
+	
+<body>
+    <!--       --> 
+    <div class ="main">
+    
+    <form name = "registration" action ="process.php" method ="post" onsubmit ="return validate()">
+      <fieldset>
+        <legend> Registration for new ph number </legend>
+        
+        <p>
+        <label> First Name </label>
+        <input type = "text" name = "firstname" />
+        <label> Last Name </label>
+        <input type = "text" name = "lastname" />
+        </p>
+        
+        <p>
+        <input type ="radio" name="level" value = "Undergradate " checked = "checked" /> Undergraduate
+        <input type ="radio" name="level" value = "Graduate" /> Graduate
+        <input type ="radio" name="level" value = "Part-Time"/> Part-Time
+        <br />
+        <input type ="radio" name="quarter" value = "Winter " /> Winter
+        
+        <input type ="radio" name="quarter" value = "Spring"/> Spring
+        <input type ="radio" name="quarter" value = "Fall"/> Fall
+        <br />  
+  
+        
+        <label>Create your new password </label>
+        <input type = "password" name = "password" /> <br />
+        <label>Enter your new password again </label>
+        <input type = "password" name = "repassword" />          
+        </p>
+          
+        
+
+        <input type="button" value="CheckSimilarity"  onclick="checkSimilarity()">
+        <button type="button" value ="Validate" onclick="validate()"> Validate </button>
+          
+        <p>
+        <label> Classes </label>
+        <select name= "classes" value = "classes" >
+            <option> Choose a class </option>
+            <option> RSOC-9 </option>
+            <option> COEN-21 </option>
+            <option> COEN-21L </option>
+            <option> ELEN-50 </option>
+            <option> ELEN-50L </option>
+            <option> LEAD-2 </option>
+            </select>
+        </p>
+  
+
+        <p>
+            <input type="checkbox" name="terms" value ="YesAgreed" /> I agreed to Terms and conditions
+            <input type="checkbox" name="terms" value ="NotAgreed" /> I do not agreed to Terms and conditions <br />
+             <input type="checkbox" name="terms" value ="Maybe" /> I may be agreed to Terms and conditions
+            <br />
+            
+            <input type="checkbox" name="mood" value ="Happy" /> Happy
+            <input type="checkbox" name="mood" value ="Sad" /> Sad
+            <input type="checkbox" name="mood" value ="Angry" /> Angry
+            <br />
+            
+
+            Comment: <textarea cols ="30" rows="5" name="message" ></textarea>  <br />
+            
+            
+           
+            <input type = "submit" value= "Submit" onclick ="return validate()" />
+           
+         </p> 
+        </fieldset>  
+ </form>
+</body>
+</html>
